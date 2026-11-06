@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Invertí en tu Futuro! - Academia Tech</title>
+    <style>
+        :root {
+            --primary: #f7df1e;
+            --dark: #1e2022;
+            --light: #f4f4f5;
+            --accent: #007acc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 5px solid var(--primary);
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { color: var(--primary); font-weight: bold; margin-top: 0.5rem; }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.03); }
+        
+        .resultado {
+            background-color: var(--dark);
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            white-space: pre-wrap;
+        }
+        .curso-card {
+            background: var(--light);
+            border-left: 5px solid var(--accent);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¿Querés conocer lo que JavaScript te da?</h1>
+        <p>Descubrí el lenguaje que mueve el mundo digital y transformá tu carrera profesional.</p>
+    </header>
+
+    <main>
+        <section id="simulador-ingreso">
+            <h2>1. Simulador de Elegibilidad (Fundamentos)</h2>
+            <p>Calculá al instante si aplicás a nuestras becas de desarrollo de software basadas en tu edad y presupuesto.</p>
+            <button class="btn" onclick="promocion.verificarElegibilidad()">Evaluar mi perfil</button>
+            <div id="res-elegibilidad" class="resultado">// El resultado de la simulación aparecerá acá...</div>
+        </section>
+
+        <section id="catalogo-cursos">
+            <h2>2. Nuestros Trayectos Formativos Activos</h2>
+            <p>Explorá los cursos disponibles procesados dinámicamente desde nuestras colecciones de datos:</p>
+            <div id="lista-cursos">
+            </div>
+            <button class="btn" onclick="promocion.filtrarCursosDisponibles()">Mostrar solo disponibles</button>
+        </section>
+
+        <section id="zona-estudiante">
+            <h2>3. Simulador de Inscripción (Clases y POO)</h2>
+            <p>Generá una simulación de tu legajo de estudiante de forma dinámica utilizando POO.</p>
+            <button class="btn" onclick="promocion.simularInscripcion()">Generar Alumno de Prueba</button>
+            <div id="res-inscripcion" class="resultado">// Los datos del objeto Alumno se renderizarán acá...</div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
